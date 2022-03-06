@@ -2,7 +2,7 @@
 [![Python 3](https://img.shields.io/badge/python-3-green.svg)](https://www.python.org/downloads/)
 [![R 4](https://img.shields.io/badge/R-4-red.svg)](https://cloud.r-project.org)
 
-# MSc Bioinformatics Computational Biology for Complex Systems Workshop
+# MSc Bioinformatics Computational Biology for Complex Systems Data Jamboree 
 
 This repo contains the demo scripts and data for MSc Bioinformatics Computational Biology for Complex Systems Data Jamboree at the University of Birmingham.
 
