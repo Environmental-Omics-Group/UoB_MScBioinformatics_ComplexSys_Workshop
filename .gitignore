@@ -1,0 +1,18 @@
+# folders
+__pycache__/
+.ipynb_checkpoints/
+.idea/
+.vscode/
+.pytest_cache/
+.venv/
+
+# file types
+*.pyc
+*.icloud
+*.swp
+
+# hidden files
+.coverage
+.DS_Store
+
+# other files
