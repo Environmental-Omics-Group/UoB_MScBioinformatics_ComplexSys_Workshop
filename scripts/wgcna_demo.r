@@ -2,7 +2,7 @@ rm(list = ls())
 
 
 library(WGCNA)
-source('scripts/fileio.R')
+source('fileio.R')
 
 
 # allow multi-threading within WGCNA
@@ -12,8 +12,8 @@ source('scripts/fileio.R')
 
 # load data
 ds = load.dataset(
-  meta.file = 'data/sample_sheet.csv', meta.sep = ',',
-  data.file = 'data/rna_norm_counts.csv', data.sep = ','
+  meta.file = '../data/sample_sheet.csv', meta.sep = ',',
+  data.file = '../data/rna_norm_counts.csv', data.sep = ','
 )
 data = ds$data.matrix
 dim(data)
@@ -111,8 +111,8 @@ inModule = is.finite(match(moduleColors, modules))
 modProbes = probes[inModule]
 modTOM = 1 - dissTOM[inModule, inModule]
 dimnames(modTOM) = list(modProbes, modProbes)
-efname = paste('data/', paste(modules, collapse = '-'), '_edges.txt', sep = '')
-nfname = paste('data/', paste(modules, collapse = '-'), '_nodes.txt', sep = '')
+efname = paste('../data/', paste(modules, collapse = '-'), '_edges.txt', sep = '')
+nfname = paste('../data/', paste(modules, collapse = '-'), '_nodes.txt', sep = '')
 
 exportNetworkToCytoscape(modTOM,
                          edgeFile = efname,

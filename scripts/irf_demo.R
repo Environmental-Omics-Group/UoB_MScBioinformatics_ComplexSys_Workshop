@@ -3,15 +3,15 @@ rm(list = ls())
 
 library(iRF)
 library(AUC)
-source('scripts/fileio.R')
+source('fileio.R')
 
 
 # load data
 ds <- load.dataset(
-  meta.file = 'data/sample_sheet.csv', meta.sep = ',',
-  data.file = 'data/rna_norm_counts.csv', data.sep = ','
+  meta.file = '../data/sample_sheet.csv', meta.sep = ',',
+  data.file = '../data/rna_norm_counts.csv', data.sep = ','
 )
-X <- ds$data.matrix
+X <- as.data.frame(ds$data.matrix)
 Y <- ds$meta.data$REF
 
 
@@ -25,14 +25,16 @@ p <- dim(X)[2]
 
 
 # split training-testing set
-train.id <- sample(1:n, size = 9*round(n/10))
+train.id <- sample(1:n, size = 8*round(n/10))
 test.id <- setdiff(1:n, train.id)
 
 
 # fit iRF without iterations
-fit <- iRF(x = X[train.id,], 
+sel.prob <- rep(1/p, p)
+
+fit <- iRF(x = X[train.id], 
            y = Y[train.id], 
-           xtest = X[test.id,], 
+           xtest = X[test.id], 
            ytest = Y[test.id],
            n.iter = 5, 
            iter.return = 1:5,

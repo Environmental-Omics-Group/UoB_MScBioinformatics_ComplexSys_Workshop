@@ -4,20 +4,20 @@ rm(list = ls())
 library(RGCCA)
 library(ggplot2)
 library(plotly)
-source('scripts/fileio.R')
+source('fileio.R')
 
 
 # load RNA-seq data
 rna.ds <- load.dataset(
-    meta.file = 'data/sample_sheet.csv', meta.sep = ',',
-    data.file = 'data/rna_norm_counts.csv', data.sep = ','
+    meta.file = '../data/sample_sheet.csv', meta.sep = ',',
+    data.file = '../data/rna_norm_counts.csv', data.sep = ','
 )
 
 
 # load DIMS data
 polar.ds <- load.dataset(
-    meta.file = 'data/sample_sheet.csv', meta.sep = ',',
-    data.file = 'data/polar_pos_pqn_imputed_glog.csv', data.sep = ','
+    meta.file = '../data/sample_sheet.csv', meta.sep = ',',
+    data.file = '../data/polar_pos_pqn_imputed_glog.csv', data.sep = ','
 )
 
 
