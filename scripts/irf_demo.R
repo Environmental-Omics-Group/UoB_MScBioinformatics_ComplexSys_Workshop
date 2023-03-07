@@ -1,6 +1,5 @@
 rm(list = ls())
 
-
 library(iRF)
 library(AUC)
 source('fileio.R')
@@ -32,9 +31,9 @@ test.id <- setdiff(1:n, train.id)
 # fit iRF without iterations
 sel.prob <- rep(1/p, p)
 
-fit <- iRF(x = X[train.id], 
+fit <- iRF(x = X[train.id,], 
            y = Y[train.id], 
-           xtest = X[test.id], 
+           xtest = X[test.id,], 
            ytest = Y[test.id],
            n.iter = 5, 
            iter.return = 1:5,
