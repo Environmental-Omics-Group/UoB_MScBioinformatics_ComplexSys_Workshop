@@ -16,5 +16,6 @@ __pycache__/
 # hidden files
 .coverage
 .DS_Store
+.bash_history
 
 # other files
