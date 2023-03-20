@@ -12,6 +12,6 @@ The contents in this repo is distributed under the GNU General Public License v3
 ## Installation
 
 ```bash
-git clone https://github.com/Environmental-Omics-Group/MScBioinformatics_ComplexSys_Workshop.git
+git clone https://github.com/Environmental-Omics-Group/UoB_MScBioinformatics_ComplexSys_Workshop.git
 ```
 
